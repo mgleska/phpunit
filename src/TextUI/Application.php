@@ -22,6 +22,7 @@ use function sprintf;
 use function str_contains;
 use function trim;
 use function unlink;
+use DOMException;
 use PHPUnit\Event\EventFacadeIsSealedException;
 use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Event\UnknownSubscriberTypeException;
@@ -533,6 +534,7 @@ final readonly class Application
     }
 
     /**
+     * @throws DOMException
      * @throws EventFacadeIsSealedException
      * @throws UnknownSubscriberTypeException
      */
